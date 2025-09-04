@@ -1,0 +1,76 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  justify-content: space-between;
+  padding: 10px 20px;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+   grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+.companylogo {
+  display: flex;
+  align-items: center;
+}
+.companylogo img {
+  height: 30px;
+}
+
+.companylogo h1 {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+.rightSideWrapper {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.searchBox {
+  width: 230px;
+  height: 50px;
+  background-color: #f5f7fa;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.searchInput {
+  color: #8ba3cb;
+  border: none;
+  outline: none;
+  padding-top: 0px;
+}
+
+.searchIcon {
+  cursor: pointer;
+  height: 30px;
+  color: #718ebf;
+  margin-right: 5px;
+}
+
+.settingsIcon {
+  background-color: #f5f7fa;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #718ebf;
+}
+
+.notificationsIcon {
+  cursor: pointer;
+  background-color: #f5f7fa;
+  color: #fe5c73;
+}
+
+.userProfileIcon {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
