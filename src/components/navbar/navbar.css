@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-  
+
   grid-row: 1;
   grid-column: 1 / -1;
 }
@@ -29,7 +29,7 @@
 .rightSideWrapper {
   display: flex;
   align-items: center;
-  gap: 17px;
+  gap: 20px;
 }
 
 .searchBox {
@@ -57,21 +57,26 @@
 }
 
 .settingsIcon {
+  color: #718ebf;
+}
+.iconWrapper {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
   background-color: #f5f7fa;
   cursor: pointer;
-  border-radius: 50%;
-  color: #718ebf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .notificationsIcon {
-  cursor: pointer;
-  background-color: #f5f7fa;
   color: #fe5c73;
 }
 
 .userProfileIcon {
   cursor: pointer;
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
 }
