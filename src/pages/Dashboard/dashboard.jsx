@@ -1,6 +1,7 @@
 import { AccountBalanceWallet, AttachMoney, AudiotrackOutlined, DesignServicesOutlined, Person3Outlined, TrendingDown } from '@mui/icons-material'
 import './dashboard.css'
 import CreditCard from '../../components/CreditCard/creditCard'
+import DualBarChart from '../../components/DualBarChart/dualBarChart'
 
 export default function Dashboard() {
     return (
@@ -89,8 +90,33 @@ export default function Dashboard() {
             <div className="myCardSection">
                 <h3 className='myCardSectionHeading'>My Card</h3>
                 <h3 className='myCardSectionSeeAll'>See All</h3>
-                <CreditCard className='creditCard'/>
+                <div className='creditCardWrapper'>
+                    <CreditCard />
+                </div>
             </div>
+
+            <div className="BarChartSection">
+                <h3 className="BarChartSectionHeading">Debit & Credit Overview</h3>
+
+                <div className="barChartWrapper">
+                    <h5 className="subheading">
+                        <strong>$7,560</strong> Debited & <strong>$5,420</strong> Credited in this Week
+                    </h5>
+
+                    <div className="legend">
+                        <span className="legend-item">
+                            <span className="legend-color debit"></span> Debit
+                        </span>
+                        <span className="legend-item">
+                            <span className="legend-color credit"></span> Credit
+                        </span>
+                    </div>
+                    <div className="dualBarChartcontainer">
+                        <DualBarChart className='barChart' />
+                    </div>
+                </div>
+            </div>
+
         </section>
     )
 }
