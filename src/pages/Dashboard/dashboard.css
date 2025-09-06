@@ -38,64 +38,6 @@
   height: 40px;
   width: 40px;
 }
-.kpi {
-  margin: 0 15px;
-  height: 120px;
-  width: 240px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: auto 1fr;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 10px;
-}
-
-.kpiHeading {
-  color: #718ebf;
-  align-self: end;
-  font-size: 0.9rem;
-  margin: 0;
-  grid-row: 1;
-  grid-column: 2;
-}
-
-.kpiValue {
-  color: #232323;
-  font-size: 1.3rem;
-  grid-column: 2;
-  grid-row: 2;
-  font-weight: bold;
-  align-self: start;
-}
-
-.balanceIconWrapper {
-  background-color: #fff5d9;
-}
-.balanceIcon {
-  color: #ffbb38;
-}
-
-.incomeIconWrapper {
-  background-color: #e7edff;
-}
-.incomeIcon {
-  color: #396aff;
-}
-
-.expenseIconWrapper {
-  background-color: #ffe0eb;
-}
-.expenseIcon {
-  color: #ff82ac;
-}
-
-.saleIconWrapper {
-  background-color: #dcfaf8;
-}
-.saleIcon {
-  color: #16dbcc;
-}
-
 .lastTransactionsSection {
   padding: 20px;
   grid-row: 2;

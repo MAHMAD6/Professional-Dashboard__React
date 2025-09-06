@@ -2,43 +2,38 @@ import { AccountBalanceWallet, AttachMoney, AudiotrackOutlined, DesignServicesOu
 import './dashboard.css'
 import CreditCard from '../../components/CreditCard/creditCard'
 import DualBarChart from '../../components/DualBarChart/dualBarChart'
+import KpiBox from '../../components/KpiBox/kpiBox'
 
 export default function Dashboard() {
     return (
         <section className='mainContent'>
             <div className="kpiWrapper">
-                <div className="kpi">
-                    <div className="iconWrapper balanceIconWrapper">
-                        <AttachMoney className='balanceIcon' />
-                    </div>
-                    <p className='kpiHeading'>My Balance</p>
-                    <p className='kpiValue'>$12,750</p>
-                </div>
-
-                <div className="kpi">
-                    <div className="iconWrapper incomeIconWrapper">
-                        <AccountBalanceWallet className='incomeIcon' />
-                    </div>
-                    <p className='kpiHeading'>Income</p>
-                    <p className='kpiValue'>$5,600</p>
-                </div>
-
-                <div className="kpi">
-                    <div className="iconWrapper expenseIconWrapper">
-                        <TrendingDown className='expenseIcon' />
-                    </div>
-                    <p className='kpiHeading'>Expense</p>
-                    <p className='kpiValue'>$3,460</p>
-                </div>
-
-                <div className="kpi">
-                    <div className="iconWrapper saleIconWrapper">
-                        <AttachMoney className='saleIcon' />
-                    </div>
-                    <p className='kpiHeading'>Total Sale</p>
-                    <p className='kpiValue'>$7,920</p>
-                </div>
+                <KpiBox
+                    icon={AttachMoney}
+                    iconClass="balanceIconWrapper"
+                    heading="My Balance"
+                    value="$12,750"
+                />
+                <KpiBox
+                    icon={AccountBalanceWallet}
+                    iconClass="incomeIconWrapper"
+                    heading="Income"
+                    value="$5,600"
+                />
+                <KpiBox
+                    icon={TrendingDown}
+                    iconClass="expenseIconWrapper"
+                    heading="Expense"
+                    value="$3,460"
+                />
+                <KpiBox
+                    icon={AttachMoney}
+                    iconClass="saleIconWrapper"
+                    heading="Total Sale"
+                    value="$7,920"
+                />
             </div>
+
 
             <div className="lastTransactionsSection">
                 <h3 className='lastTransactionsHeading'>Last Transactions</h3>
