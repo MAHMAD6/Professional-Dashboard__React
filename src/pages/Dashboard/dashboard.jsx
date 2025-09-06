@@ -4,6 +4,43 @@ import CreditCard from '../../components/CreditCard/creditCard'
 import DualBarChart from '../../components/DualBarChart/dualBarChart'
 import KpiBox from '../../components/KpiBox/kpiBox'
 
+const transactions = [
+    {
+        icon: 'AudiotrackOutlined',
+        iconClass: 'shoppingIcon',
+        title: 'Spotify Subscription',
+        date: '25 Jan 2021',
+        type: 'Shopping',
+        cardNumber: '1234 ****',
+        status: 'Pending',
+        amount: -150,
+        amountType: 'Debit'
+    },
+    {
+        icon: 'DesignServicesOutlined',
+        iconClass: 'serviceIcon',
+        title: 'Mobile Service',
+        date: '23 Jan 2021',
+        type: 'Entertainment',
+        cardNumber: '4321 ****',
+        status: 'Completed',
+        amount: -200,
+        amountType: 'Debit'
+    },
+    {
+        icon: 'Person3Outlined',
+        iconClass: 'incomeIcon',
+        title: 'Freelance Payment',
+        date: '21 Jan 2021',
+        type: 'Income',
+        cardNumber: '8765 ****',
+        status: 'Completed',
+        amount: 1200,
+        amountType: 'Credit'
+    }
+];
+
+
 export default function Dashboard() {
     return (
         <section className='mainContent'>
@@ -39,46 +76,35 @@ export default function Dashboard() {
                 <h3 className='lastTransactionsHeading'>Last Transactions</h3>
                 <table className='lastTransactionsTable'>
                     <tbody>
-                        <tr>
-                            <td className='tableIconsWrapper shoppingIcon'>
-                                <AudiotrackOutlined />
-                            </td>
-                            <td>
-                                <p className='lastTransactionsTableHeading'>Spotify Subscription</p>
-                                <p className='lastTransactionsDate'>25 Jan 2021</p>
-                            </td>
-                            <td className='lastTransactionsType'>Shopping</td>
-                            <td className='lastTransactionsCardNumber'>1234 ****</td>
-                            <td className='lastTransactionsCardStatus'>Pending</td>
-                            <td className='lastTransactionsCardAmount Debit'>-$150</td>
-                        </tr>
-                        <tr>
-                            <td className='tableIconsWrapper serviceIcon'>
-                                <DesignServicesOutlined />
-                            </td>
-                            <td>
-                                <p className='lastTransactionsTableHeading'>Mobile Service</p>
-                                <p className='lastTransactionsDate'>23 Jan 2021</p>
-                            </td>
-                            <td className='lastTransactionsType'>Entertainment</td>
-                            <td className='lastTransactionsCardNumber'>4321 ****</td>
-                            <td className='lastTransactionsCardStatus'>Completed</td>
-                            <td className='lastTransactionsCardAmount Debit'>-$200</td>
-                        </tr>
-                        <tr>
-                            <td className='tableIconsWrapper incomeIcon'>
-                                <Person3Outlined />
-                            </td>
-                            <td>
-                                <p className='lastTransactionsTableHeading'>Freelance Payment</p>
-                                <p className='lastTransactionsDate'>21 Jan 2021</p>
-                            </td>
-                            <td className='lastTransactionsType'>Income</td>
-                            <td className='lastTransactionsCardNumber'>8765 ****</td>
-                            <td className='lastTransactionsCardStatus'>Completed</td>
-                            <td className='lastTransactionsCardAmount Credit'>+$1,200</td>
-                        </tr>
+                        {transactions.map((txn, index) => {
+                            const IconComponent = {
+                                AudiotrackOutlined,
+                                DesignServicesOutlined,
+                                Person3Outlined
+                            }[txn.icon];
+
+                            return (
+                                <tr key={index}>
+                                    <td className={`tableIconsWrapper ${txn.iconClass}`}>
+                                        <IconComponent />
+                                    </td>
+                                    <td>
+                                        <p className="lastTransactionsTableHeading">{txn.title}</p>
+                                        <p className="lastTransactionsDate">{txn.date}</p>
+                                    </td>
+                                    <td className="lastTransactionsType">{txn.type}</td>
+                                    <td className="lastTransactionsCardNumber">{txn.cardNumber}</td>
+                                    <td className="lastTransactionsCardStatus">{txn.status}</td>
+                                    <td
+                                        className={`lastTransactionsCardAmount ${txn.amountType}`}
+                                    >
+                                        {txn.amount > 0 ? `+$${txn.amount}` : `-$${Math.abs(txn.amount)}`}
+                                    </td>
+                                </tr>
+                            );
+                        })}
                     </tbody>
+
                 </table>
             </div>
 
