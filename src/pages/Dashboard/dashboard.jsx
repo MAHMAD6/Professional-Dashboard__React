@@ -1,44 +1,14 @@
-import { AccountBalanceWallet, AttachMoney, AudiotrackOutlined, DesignServicesOutlined, Person3Outlined, TrendingDown } from '@mui/icons-material'
+import {
+    AccountBalanceWallet, AttachMoney, AudiotrackOutlined, DesignServicesOutlined, Person3Outlined, TrendingDown
+    , 
+} from '@mui/icons-material'
+
 import './dashboard.css'
 import CreditCard from '../../components/CreditCard/creditCard'
 import DualBarChart from '../../components/DualBarChart/dualBarChart'
 import KpiBox from '../../components/KpiBox/kpiBox'
+import { invoices, transactions } from '../../dummyData';
 
-const transactions = [
-    {
-        icon: 'AudiotrackOutlined',
-        iconClass: 'shoppingIcon',
-        title: 'Spotify Subscription',
-        date: '25 Jan 2021',
-        type: 'Shopping',
-        cardNumber: '1234 ****',
-        status: 'Pending',
-        amount: -150,
-        amountType: 'Debit'
-    },
-    {
-        icon: 'DesignServicesOutlined',
-        iconClass: 'serviceIcon',
-        title: 'Mobile Service',
-        date: '23 Jan 2021',
-        type: 'Entertainment',
-        cardNumber: '4321 ****',
-        status: 'Completed',
-        amount: -200,
-        amountType: 'Debit'
-    },
-    {
-        icon: 'Person3Outlined',
-        iconClass: 'incomeIcon',
-        title: 'Freelance Payment',
-        date: '21 Jan 2021',
-        type: 'Income',
-        cardNumber: '8765 ****',
-        status: 'Completed',
-        amount: 1200,
-        amountType: 'Credit'
-    }
-];
 
 
 export default function Dashboard() {
@@ -135,6 +105,24 @@ export default function Dashboard() {
                     <div className="dualBarChartcontainer">
                         <DualBarChart className='barChart' />
                     </div>
+                </div>
+            </div>
+
+            <div className="invoicesSection">
+                <h3 className="invoicesHeading">Invoices Sent</h3>
+                <div className="invoicesList">
+                    {invoices.map((invoice, index) => (
+                        <div className="invoiceItem" key={index}>
+                            <div className={`invoiceIconWrapper ${invoice.iconClass}`}>
+                                {invoice.icon}
+                            </div>
+                            <div className="invoiceDetails">
+                                <p className="invoiceTitle">{invoice.title}</p>
+                                <p className="invoiceTime">{invoice.time}</p>
+                            </div>
+                            <p className="invoiceAmount">${invoice.amount}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
 

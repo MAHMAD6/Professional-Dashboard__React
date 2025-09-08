@@ -1,7 +1,7 @@
 .kpi {
   margin: 0 15px;
-  height: 120px;
-  width: 240px;
+  height: 110px;
+  width: 230px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: auto 1fr;
@@ -13,7 +13,7 @@
 .kpiHeading {
   color: #718ebf;
   align-self: end;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
   grid-row: 1;
   grid-column: 2;
@@ -21,11 +21,23 @@
 
 .kpiValue {
   color: #232323;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   grid-column: 2;
   grid-row: 2;
   font-weight: bold;
   align-self: start;
+}
+
+.iconWrapper {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: auto 20px;
+  justify-content: center;
+  background-color: #f5f7fa;
+  margin-left: 15px;
 }
 
 .balanceIconWrapper {

@@ -1,6 +1,6 @@
 .creditCard {
   width: 320px;
-  height: 170px;
+  height: 210px;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #2d60ff, #539bff);
   position: relative;
@@ -34,6 +34,8 @@
 .cardDetails {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: -15px;
 }
 
 .label {

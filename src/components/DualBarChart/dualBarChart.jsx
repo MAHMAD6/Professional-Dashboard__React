@@ -19,7 +19,7 @@ const data = [
 
 export default function DualBarChart() {
     return (
-        <ResponsiveContainer width="100%" height={300} >
+        <ResponsiveContainer width="100%" height={250} >
             <BarChart data={data} barCategoryGap="20%"  >
                 <XAxis dataKey="day" tick={{ fill: "#9CA3AF" }} axisLine={false} tickLine={false}
                 />
