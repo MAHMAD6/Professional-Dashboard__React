@@ -1,5 +1,5 @@
 import './navbar.css'
-import { Search, Settings, Notifications, SettingsOutlined, NotificationsOutlined } from '@mui/icons-material';
+import { Search,  SettingsOutlined, NotificationsOutlined } from '@mui/icons-material';
 
 export default function Navbar() {
   return (
@@ -13,10 +13,10 @@ export default function Navbar() {
           <Search className='searchIcon' />
           <input className='searchInput' type='search' placeholder='Search for something' />
         </div>
-        <div className="iconWrapper">
+        <div className="navbarIconWrapper">
           <SettingsOutlined className='settingsIcon' />
         </div>
-        <div className="iconWrapper">
+        <div className="navbarIconWrapper">
           <NotificationsOutlined className='notificationsIcon' />
         </div>
         <img className='userProfileIcon' src='https://i.pinimg.com/736x/12/05/9c/12059cfc3ebd75a318de3c257aca5971.jpg' alt='userProfile' />

@@ -5,13 +5,12 @@
   justify-content: space-between;
   padding: 10px 20px;
   top: 0;
-  height: 60px;
+  height: 70px;
   left: 0;
   z-index: 999;
   background-color: white;
   grid-row: 1;
   grid-column: 1 / -1;
-  height: 80px;
 }
 
 .companylogo {
@@ -36,7 +35,7 @@
 
 .searchBox {
   width: 230px;
-  height: 50px;
+  height: 40px;
   background-color: #f5f7fa;
   border-radius: 40px;
   display: flex;
@@ -45,6 +44,7 @@
 }
 
 .searchInput {
+  background-color: #f5f7fa;
   color: #8ba3cb;
   border: none;
   outline: none;
@@ -61,7 +61,7 @@
 .settingsIcon {
   color: #718ebf;
 }
-.iconWrapper {
+.navbarIconWrapper {
   height: 37px;
   width: 37px;
   border-radius: 50%;
